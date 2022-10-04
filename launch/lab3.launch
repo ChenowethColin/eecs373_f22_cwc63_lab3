@@ -1,0 +1,16 @@
+<launch>
+ 
+  <arg name="use_sim_time" default="false"/>
+  <arg name="use_xacro" default="true"/>
+  <arg name="use_gui" default="true"/>
+ 
+  <include file="$(find navvis_description)/launch/display.launch">
+    <arg name="use_xacro" value="$(arg use_xacro)"/>
+    <arg name="use_gui" value="$(arg use_gui)"/>
+    <arg name="use_external_time" value="$(arg use_sim_time)"/>
+  </include>
+
+  <arg name="old_config" default="false"/>
+  <param unless="$(arg old_config)" name="robot_description" command="$(find xacro)/xacro --inorder $(find lab3)/urdf/robot.xacro" />
+
+</launch>
