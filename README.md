@@ -2,7 +2,7 @@
 
 This ROS package depends upon the package `https://github.com/ChenowethColin/ecse373_f22_cwc63_navvis_description`.
 
-This package is ran using `roslaunch lab3 lab3.launch`.
+This package is ran using `roslaunch <lab3_package_name> lab3.launch`.
 
 `lab3.launch` has the following parameters:
 <br>
